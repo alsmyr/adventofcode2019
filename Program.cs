@@ -15,7 +15,7 @@ namespace Adventofcode2019
             task.Input = File.ReadAllLines(Directory.GetCurrentDirectory() + string.Format("/Input/Day{0}.txt", day));
             string res = task.Run();
             string res2 = task.Run2();
-            Console.WriteLine("------------------------------------");
+            Console.WriteLine("---------------------------------------");
             Console.WriteLine(res);
             Console.WriteLine(res2);
         }
