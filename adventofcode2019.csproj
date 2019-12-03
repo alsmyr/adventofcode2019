@@ -45,6 +45,8 @@
     <Compile Include="Tasks\IntCodeComputer.cs" />
     <Compile Include="Tasks\Tests\IntCodeComputerTests.cs" />
     <Compile Include="Tasks\Tests\Day2Tests.cs" />
+    <Compile Include="Tasks\Day3.cs" />
+    <Compile Include="Tasks\Tests\Day3Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tasks\" />
@@ -57,6 +59,9 @@
     </None>
     <None Include="packages.config" />
     <None Include="Input\Day2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Input\Day3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
