@@ -16,15 +16,9 @@ namespace Adventofcode2019.Tasks.Tests
         }
 
         [Test]
-        public void Day2Test1()
+        public void Day3Test1()
         {
             Assert.AreEqual("1674", d.Run());
-        }
-
-        [Test]
-        public void Day2Test2()
-        {
-            //Assert.AreEqual("3892", d.Run2());
         }
     }
 }
