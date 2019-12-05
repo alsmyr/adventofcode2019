@@ -14,9 +14,14 @@ namespace Adventofcode2019.Tasks
             //1,1,1,4,99,5,6,0,99 becomes 30,1,1,4,2,5,6,0,99.
             this.program = program;
             pointer = 0;
-            while (Evaluate(pointer))
+            while (true)
             {
-                pointer += 4;
+                int step = Evaluate(pointer);
+                pointer += step;
+                if (step == 0)
+                {
+                    break;
+                }
             }
             return this.program;
         }
@@ -31,18 +36,44 @@ namespace Adventofcode2019.Tasks
             program[res] = program[p1] * program[p2];
         }
 
-        private bool Evaluate(int position)
+        private void Set(int val, int pos)
         {
-            switch(program[position])
+            program[pos] = val;
+        }
+
+        private int Get(int pos)
+        {
+            return program[pos];
+        }
+
+        private int Opcode(int instruction)
+        {
+            return instruction % 100;
+        }
+
+        //private (int,int,int) Params(int position)
+        //{
+            //return instruction % 100;
+        //}
+
+        private int Evaluate(int position)
+        {
+            
+
+            switch (Opcode(program[position]))
             {
                 case 1:
                         Add(program[position + 1], program[position + 2], program[position + 3]);
-                    return true;
+                    return 4;
+                    
                 case 2:
                         Multiply(program[position + 1], program[position + 2], program[position + 3]);
-                    return true;
+                    return 4;
+                case 3:
+                    Set(1, program[position + 1]);
+                    return 1;
                 case 99:
-                    return false;
+                    return 0;
                 default:
                     throw new Exception("Unknown OPCODE:" + program[position] + " at position " + position); 
 
