@@ -6,7 +6,7 @@ namespace Adventofcode2019
 {
     class MainClass
     {
-        private const int day = 4;
+        private const int day = 6;
 
         public static void Main(string[] args)
         {

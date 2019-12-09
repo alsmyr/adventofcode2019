@@ -49,6 +49,8 @@
     <Compile Include="Tasks\Tests\Day3Tests.cs" />
     <Compile Include="Tasks\Day4.cs" />
     <Compile Include="Tasks\Tests\Day4Tests.cs" />
+    <Compile Include="Tasks\Day6.cs" />
+    <Compile Include="Tasks\Tests\Day6Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tasks\" />
@@ -67,6 +69,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Input\Day4.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Input\Day6.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
